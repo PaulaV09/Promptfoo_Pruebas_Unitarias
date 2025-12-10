@@ -1,29 +1,15 @@
+# promptfooconfig.yaml
 # yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
-description: 'Getting started'
-# Optionally set API keys here instead of exporting environment variables.
-# Never commit real keys to source control.
-env:
+description: 'Pruebas para 30 prompts - JavaScript junior (Prompts externos y tests externos)'
+
+env: 
   GEMINI_API_KEY: AIzaSyC1x9QRvWyl6cKmWO1yKpSGBSTEdmWBph4
+
 prompts:
-  - 'Convert this English to {{language}}: {{input}}'
-  - 'Translate to {{language}}: {{input}}'
+  - file://prompts/*.txt
 
 providers:
   - "google:gemini-2.5-pro"
-  # Or setup models from other providers
-  # - anthropic:messages:claude-sonnet-4-5-20250929
-  # - vertex:gemini-2.5-pro
 
-tests:
-  - vars:
-      language: French
-      input: Hello world
-    assert:
-      - type: contains
-        value: 'Bonjour le monde'
-  - vars:
-      language: Spanish
-      input: Where is the library?
-    assert:
-      - type: icontains
-        value: 'Dónde está la biblioteca'
+defaultTest: file://tests/tests.yml
+

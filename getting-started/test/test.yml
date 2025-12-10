@@ -1,0 +1,422 @@
+# tests/tests.yml
+# Lista de tests para los 30 prompts. Cada item corresponde a un prompt.
+tests:
+  - name: "01 - Diferencia let var const"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cuál es la diferencia entre let, var y const en JavaScript y cuándo debería usar cada una?"
+    assert:
+      - type: contains
+        value: "alcance"
+      - type: contains
+        value: "redeclaración"
+      - type: contains
+        value: "reasignación"
+      - type: icontains
+        value: "evitar var"
+
+  - name: "02 - Scope y scope de bloque"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es el scope en JavaScript y cómo funciona el scope de bloque?"
+    assert:
+      - type: contains
+        value: "scope"
+      - type: contains
+        value: "scope de bloque"
+      - type: contains
+        value: "if"
+  
+  - name: "03 - Hoisting"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es hoisting en JavaScript y qué variables y funciones se ven afectadas?"
+    assert:
+      - type: contains
+        value: "hoisting"
+      - type: contains
+        value: "var"
+      - type: contains
+        value: "let"
+      - type: contains
+        value: "funciones"
+  
+  - name: "04 - Coerción de tipos"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es la coerción de tipos en JavaScript y por qué a veces convierte valores automáticamente?"
+    assert:
+      - type: contains
+        value: "coerción"
+      - type: contains
+        value: "=="
+      - type: contains
+        value: "+"
+
+  - name: "05 - == vs ==="
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cuál es la diferencia entre == y === en JavaScript y cuándo debería usar cada uno?"
+    assert:
+      - type: contains
+        value: "débil"
+      - type: contains
+        value: "estricta"
+      - type: contains
+        value: "!=="
+
+  - name: "06 - Callbacks"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es una función de callback en JavaScript y para qué se usa?"
+    assert:
+      - type: contains
+        value: "callback"
+      - type: contains
+        value: "asincronía"
+      - type: contains
+        value: "setTimeout"
+
+  - name: "07 - Arrow functions"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es una arrow function y en qué se diferencia de una función normal?"
+    assert:
+      - type: contains
+        value: "=>"
+      - type: contains
+        value: "this léxico"
+      - type: contains
+        value: "sintaxis"
+
+  - name: "08 - this"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es el objeto this en JavaScript y por qué cambia dependiendo del contexto?"
+    assert:
+      - type: contains
+        value: "this"
+      - type: contains
+        value: "objeto"
+      - type: contains
+        value: "strict mode"
+
+  - name: "09 - Single-threaded"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué significa que JavaScript sea single-threaded?"
+    assert:
+      - type: contains
+        value: "single-threaded"
+      - type: contains
+        value: "bloqueo"
+      - type: contains
+        value: "event loop"
+
+  - name: "10 - Event Loop"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es el event loop en JavaScript y cómo funciona?"
+    assert:
+      - type: contains
+        value: "event loop"
+      - type: contains
+        value: "colas"
+      - type: contains
+        value: "microtasks"
+
+  - name: "11 - Seleccionar elementos DOM"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cómo seleccionar elementos del DOM usando JavaScript?"
+    assert:
+      - type: contains
+        value: "querySelector"
+      - type: contains
+        value: "getElementById"
+  
+  - name: "12 - innerHTML vs textContent vs innerText"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cuál es la diferencia entre innerHTML, textContent y innerText?"
+    assert:
+      - type: contains
+        value: "innerHTML"
+      - type: contains
+        value: "textContent"
+      - type: contains
+        value: "seguridad"
+
+  - name: "13 - Agregar y eliminar clases"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cómo agregar o eliminar clases CSS desde JavaScript?"
+    assert:
+      - type: contains
+        value: "classList"
+      - type: contains
+        value: "add"
+      - type: contains
+        value: "remove"
+
+  - name: "14 - Crear nodos dinámicamente"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cómo puedo crear elementos dinámicamente con JavaScript y agregarlos al DOM?"
+    assert:
+      - type: contains
+        value: "createElement"
+      - type: contains
+        value: "append"
+
+  - name: "15 - Scripts al final del body"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Por qué mis scripts no funcionan si no los pongo al final del body?"
+    assert:
+      - type: contains
+        value: "DOMContentLoaded"
+      - type: contains
+        value: "defer"
+      - type: contains
+        value: "async"
+
+  - name: "16 - Mutar vs copiar arrays"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué diferencia hay entre mutar un array y crear una copia en JavaScript?"
+    assert:
+      - type: contains
+        value: "mutar"
+      - type: contains
+        value: "spread"
+      - type: contains
+        value: "slice"
+
+  - name: "17 - map filter reduce"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué hacen los métodos map(), filter() y reduce() y para qué sirven?"
+    assert:
+      - type: contains
+        value: "map"
+      - type: contains
+        value: "filter"
+      - type: contains
+        value: "reduce"
+
+  - name: "18 - Inmutabilidad"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué significa inmutabilidad en JavaScript y cómo puedo aplicarla?"
+    assert:
+      - type: contains
+        value: "inmutabilidad"
+      - type: contains
+        value: "estado"
+      - type: contains
+        value: "copiar"
+
+  - name: "19 - Desestructuración"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es la desestructuración de objetos y arrays en JavaScript?"
+    assert:
+      - type: contains
+        value: "desestructuración"
+      - type: contains
+        value: "{"
+      - type: contains
+        value: "["
+
+  - name: "20 - Spread operator"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué son los spread operators (...) y para qué sirven?"
+    assert:
+      - type: contains
+        value: "..."
+      - type: contains
+        value: "spread"
+      - type: contains
+        value: "rest"
+
+  - name: "21 - Promesas"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es una promesa (Promise) en JavaScript y para qué se utiliza?"
+    assert:
+      - type: contains
+        value: "Promise"
+      - type: contains
+        value: "pending"
+      - type: contains
+        value: "then"
+
+  - name: "22 - then vs async await"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cuál es la diferencia entre usar .then() y usar async/await?"
+    assert:
+      - type: contains
+        value: "async"
+      - type: contains
+        value: "await"
+      - type: contains
+        value: "then"
+
+  - name: "23 - Errores no manejados en promesas"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es un error no manejado en promesas y cómo puedo evitarlo?"
+    assert:
+      - type: contains
+        value: "catch"
+      - type: contains
+        value: "unhandled"
+      - type: contains
+        value: "try"
+
+  - name: "24 - fetch()"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Qué es fetch() en JavaScript y cómo se usa para hacer peticiones HTTP?"
+    assert:
+      - type: contains
+        value: "fetch"
+      - type: contains
+        value: "GET"
+      - type: contains
+        value: "try/catch"
+
+  - name: "25 - Error undefined"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Por qué aparece el error 'undefined' cuando intento usar una variable?"
+    assert:
+      - type: contains
+        value: "undefined"
+      - type: contains
+        value: "causas"
+      - type: contains
+        value: "valor"
+
+  - name: "26 - Cannot read property of undefined"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Por qué me sale el error 'Cannot read property of undefined'?"
+    assert:
+      - type: contains
+        value: "Cannot read property"
+      - type: contains
+        value: "optional chaining"
+      - type: contains
+        value: "null"
+
+  - name: "27 - Funciones puras"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cuándo debo usar funciones puras en JavaScript?"
+    assert:
+      - type: contains
+        value: "función pura"
+      - type: contains
+        value: "sin efectos"
+      - type: contains
+        value: "determinista"
+
+  - name: "28 - Organización de código"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cómo organizo mi código en JavaScript para que no quede todo en un solo archivo?"
+    assert:
+      - type: contains
+        value: "modular"
+      - type: contains
+        value: "utils"
+      - type: contains
+        value: "módulos"
+
+  - name: "29 - Importación default vs named"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cuál es la diferencia entre importar por defecto e importar por nombre?"
+    assert:
+      - type: contains
+        value: "default"
+      - type: contains
+        value: "named"
+      - type: contains
+        value: "llaves"
+
+  - name: "30 - Refactorización"
+    vars:
+      edad: "22"
+      stack: "Vanilla JS"
+      nivel: "junior"
+      input: "¿Cómo puedo saber si mi código en JavaScript necesita refactorización?"
+    assert:
+      - type: contains
+        value: "refactorizar"
+      - type: contains
+        value: "señales"
+      - type: contains
+        value: "duplicación"
